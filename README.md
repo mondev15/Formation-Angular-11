@@ -1,3 +1,26 @@
+## Installations && Configurations----------------
+Installation
+============
+-NodeJS
+-AngularCli
+-ng --version
+
+plugins
+=======
+- angular essentials
+- sass
+- todolist
+- tabnine
+- gitlens pour l'historique du code
+
+Test Unitaire
+=============
+- Karma : utiliser pour faire les tests unitaires
+- Jest: permet d'aller plus loin dans les test et il est moins lourd
+- Karma et Jasmine sont ajouté par défault lors de la création d'un projet angular
+- polifills : émultation pour les versions antérieurs d'angular
+- aot: précompilcation qui permet à une application de démarrer rapidement
+- angular.json : configuration pour l'exécution de l'application angular(script, prod)
 # Crm2AtosMai
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
