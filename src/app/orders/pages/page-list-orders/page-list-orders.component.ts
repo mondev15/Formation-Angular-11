@@ -10,15 +10,22 @@ import { OrdersService } from '../../services/orders.service';
 export class PageListOrdersComponent implements OnInit {
   public collection!: Order[];
   public title = 'List Orders';
+  public headers = [
+    'Type',
+    'Client',
+    'NbJours',
+    'Tjm HT',
+    'Total HT',
+    'Total TTC',
+    'State',
+  ];
   constructor(private ordersService: OrdersService) {
     this.ordersService.collection.subscribe((data) => {
-      console.log(data);
+      this.collection = data;
     });
   }
-
   ngOnInit(): void {}
-
   public changeTitle(): void {
-    this.title = 'new list orders';
+    this.title = 'New list orders';
   }
 }
