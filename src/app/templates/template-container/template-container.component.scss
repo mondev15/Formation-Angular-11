@@ -1,0 +1,11 @@
+.bandeau {
+  background: var(--app-primary);
+  h1{
+    color: var(--app-light)
+  }
+}
+
+.my-container {
+  padding: 15 px; // padding : marge intérieure
+  max-width: 500px; // pour les écrans dont les pixels> 500 px le width ne dépassera jamais les 500 px
+}
