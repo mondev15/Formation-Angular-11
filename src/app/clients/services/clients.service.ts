@@ -30,6 +30,10 @@ export class ClientsService {
     return this.update(obj);
   }
 
+  public add(item: Client): Observable<Client> {
+    return this.http.post<Client>(`${this.urlApi}/clients/`, item);
+  }
+
   public update(item: Client): Observable<Client> {
     return this.http.put<Client>(`${this.urlApi}/clients/${item.id}`, item);
   }

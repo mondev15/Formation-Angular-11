@@ -24,21 +24,11 @@
       "tjmHt": 1200,
       "nbJours": 1,
       "tva": 20,
-      "state": "OPTION",
-      "typePresta": null,
-      "client": null,
-      "comment": "fsfsfs",
+      "state": "CONFIRMED",
+      "typePresta": "dd",
+      "client": "ds",
+      "comment": "d",
       "id": 3
-    },
-    {
-      "tjmHt": 1200,
-      "nbJours": 1,
-      "tva": 20,
-      "state": "OPTION",
-      "typePresta": null,
-      "client": null,
-      "comment": null,
-      "id": 4
     }
   ],
   "clients": [
@@ -60,11 +50,19 @@
     },
     {
       "tva": 20,
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "name": "modis",
       "totalCaHt": 0,
       "comment": "rsger",
       "id": 3
+    },
+    {
+      "state": "ACTIVE",
+      "tva": 20,
+      "id": 4,
+      "name": "incongito",
+      "totalCaHt": 1200,
+      "comment": "myacontent"
     }
   ]
 }

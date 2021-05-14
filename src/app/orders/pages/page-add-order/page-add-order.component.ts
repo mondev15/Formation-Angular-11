@@ -9,8 +9,11 @@ import { OrdersService } from '../../services/orders.service';
 })
 export class PageAddOrderComponent implements OnInit {
   public item = new Order();
+
   constructor(private ordersService: OrdersService, private router: Router) {}
+
   ngOnInit(): void {}
+
   public action(item: Order): void {
     this.ordersService.add(item).subscribe((res) => {
       // traiter les codes erreurs de l'api
