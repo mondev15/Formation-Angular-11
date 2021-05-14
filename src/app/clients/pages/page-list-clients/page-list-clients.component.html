@@ -4,7 +4,7 @@
       <td>{{ item.name }}</td>
       <td>{{ item.totalCaHt | currency }}</td>
       <td>{{ item.tva }} %</td>
-      <td> {{ item.totalCaHt | total: 1 : item.tva }}</td>
+      <td> {{ item.totalCaHt | total: 1 : item.tva | currency }}</td>
       <td [appState]="item.state">
         <select (change)="changeState($event, item)">
           <option *ngFor="let state of states" [value]="state" [selected]="state === item.state">
