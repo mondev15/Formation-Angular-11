@@ -19,11 +19,31 @@
       "client": "ddd",
       "comment": "un autre commentaire",
       "id": 2
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": null,
+      "client": null,
+      "comment": "fsfsfs",
+      "id": 3
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": null,
+      "client": null,
+      "comment": null,
+      "id": 4
     }
   ],
   "clients": [
     {
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "tva": 20,
       "id": 1,
       "name": "Christophe2",
@@ -31,7 +51,7 @@
       "comment": "un comment pour client christophe2"
     },
     {
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "tva": 20,
       "id": 2,
       "name": "Modis",

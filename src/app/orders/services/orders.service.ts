@@ -26,12 +26,14 @@ export class OrdersService {
     this.collection$ = col;
   }
 
-  // --- add item to collection
-  // --- update item in collection
   public changeState(item: Order, state: StateOrder): Observable<Order> {
     const obj = { ...item }; // spread operation js (es6) : desctructuring;
     obj.state = state;
     return this.update(obj);
+  }
+
+  public add(item: Order): Observable<Order> {
+    return this.http.post<Order>(`${this.urlApi}/orders/`, item);
   }
 
   public update(item: Order): Observable<Order> {
