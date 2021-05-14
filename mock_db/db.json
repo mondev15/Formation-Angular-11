@@ -23,7 +23,7 @@
   ],
   "clients": [
     {
-      "state": "ACTIVE",
+      "state": "INACTIVE",
       "tva": 20,
       "id": 1,
       "name": "Christophe2",
@@ -40,7 +40,7 @@
     },
     {
       "tva": 20,
-      "state": "ACTIVE",
+      "state": "INACTIVE",
       "name": "modis",
       "totalCaHt": 0,
       "comment": "rsger",
