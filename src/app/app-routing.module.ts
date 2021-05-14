@@ -28,11 +28,6 @@ const routes: Routes = [
       import('./clients/clients.module').then((m) => m.ClientsModule),
   },
   {
-    path: 'add',
-    loadChildren: () =>
-      import('./clients/clients.module').then((m) => m.ClientsModule),
-  },
-  {
     path: '**',
     loadChildren: () =>
       import('./page-not-found/page-not-found.module').then(
