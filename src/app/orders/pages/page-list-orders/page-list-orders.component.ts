@@ -21,11 +21,23 @@ export class PageListOrdersComponent implements OnInit {
   ];
   constructor(private ordersService: OrdersService) {
     this.ordersService.collection.subscribe((data) => {
+      console.log(data);
       this.collection = data;
     });
   }
+
   ngOnInit(): void {}
+
   public changeTitle(): void {
     this.title = 'New list orders';
   }
+
+  /*  A EVITER : UTILISER LES PIPES
+  public total(val: number, coeff: number, tva?: number): number {
+    if (tva) {
+      return val * coeff * (1 + tva / 100);
+    }
+    return val * coeff;
+  }
+  */
 }

@@ -7,14 +7,5 @@
   </thead>
   <tbody>
     <!-- boucle sur un tableau d'objets pour créer autant de lignes qu'il a d'objets dans mon tableau js -->
-    <tr *ngFor=" let item of  collection">
-      <td>{{ item.typePresta }}</td>
-      <td>{{ item.client }}</td>
-      <td>{{ item.nbJours }}</td>
-      <td>{{ item.tjmHt }}</td>
-      <td>TOTAL HT</td>
-      <td>TOTAL TTC</td>
-      <td>{{ item.state }}</td>
-    </tr>
-  </tbody>
+    <ng-content></ng-content>
 </table>
