@@ -22,6 +22,11 @@
             {{state}}
           </option>
         </select>
+      </td>
+      <td>
+        <app-icon-edit (click)="goToEdit(item.id)"> </app-icon-edit>
+        <app-icon-delete> </app-icon-delete>
+      </td>
     </tr>
   </app-table-light>
 
