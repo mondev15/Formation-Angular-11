@@ -1,0 +1,46 @@
+import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
+
+@Directive({
+  selector: '[appLazySrc]',
+})
+export class LazySrcDirective implements OnInit {
+  @Input() lazySrc?: string;
+
+  private _intersectionObserver?: IntersectionObserver;
+
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  ngOnInit() {
+    this._intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        this._CheckForIntersection(entries);
+      },
+      { threshold: 0.0, rootMargin: '10px' }
+    );
+
+    this._intersectionObserver.observe(this.el.nativeElement);
+  }
+
+  private _CheckForIntersection = (entries: Array<IntersectionObserverEntry>) => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      if (entry.isIntersecting && this.lazySrc) {
+        this.renderer.setAttribute(this.el.nativeElement, 'src', this.lazySrc);
+        this.renderer.removeClass(this.el.nativeElement, 'data-src');
+        this._intersectionObserver?.unobserve(this.el.nativeElement);
+      }
+    });
+  };
+  
+ /* example of use 
+     <img
+      appLazySrc
+      [lazySrc]="'assets/spinner-18.gif'"
+      [attr.data-src]="'assets/spinner-18.gif'"
+      [alt]=""
+    />
+    or 
+      <img appLazySrc 
+      [lazySrc]="icon"
+      [attr.data-src]="icon" [alt]=""/>
+ */
+}
